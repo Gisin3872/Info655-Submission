@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Song from './Song';
 import Podcast from './Podcast';
 import './App.css';
-import ShuffleButton from './ShuffleButton.js';
-import BackButton from './BackButton.js';
-import PlayButton from './PlayButton.js';
-import NextButton from './NextButton.js';
 
 const Playlist = () => {
   
@@ -17,7 +13,7 @@ const Playlist = () => {
     xhr.send();
     xhr.responseType = "json";
     xhr.onload = () => {
-      if (xhr.readyState == 4 && xhr.status == 200) {
+      if (xhr.readyState === 4 && xhr.status === 200) {
         const data = xhr.response;
         setPlaylist(data);
       } else {
