@@ -9,7 +9,7 @@ const Playlist = () => {
 
   const getSongs = () => {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:3001/tracks");
+    xhr.open("GET", "https://raw.githubusercontent.com/Gisin3872/Info655-Submission/main/src/audio_tracks.json");
     xhr.send();
     xhr.responseType = "json";
     xhr.onload = () => {
